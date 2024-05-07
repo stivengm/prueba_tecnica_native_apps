@@ -1,0 +1,22 @@
+<div class="content_home">
+
+    <div class="categories">
+        @for (category of categories; track $index) {
+
+            <span class="item_category" (click)="searchByCategory(category.strCategory)"> {{ category.strCategory }}</span>
+            
+        }
+    </div>
+
+    <div class="recipe_results">
+
+        @for (recipe of recipeSearch; track $index) {
+            <div class="item_recipe">
+                <img [src]="recipe.strMealThumb" class="img_recipe" alt="">
+                <p>{{ recipe.strMeal }}</p>
+            </div>
+        }
+
+    </div>
+
+</div>

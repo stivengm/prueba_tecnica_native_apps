@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --mt-background-color-app: #fdfbff;
+
+    --mt-text-title: #404040;
+    --mt-text-subtitle: #949494;
+    background: var(--mt-background-color-app);
+}

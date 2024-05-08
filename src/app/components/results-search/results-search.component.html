@@ -1,1 +1,10 @@
-<p>results-search works!</p>
+<div class="content_result_search">
+
+    @for (recipe of recipeResults; track $index) {
+        <div class="item_recipe">
+            <img [src]="recipe.strMealThumb" class="img_recipe" alt="">
+            <span class="title_recipe">{{ recipe.strMeal }}</span>
+        </div>
+    }
+
+</div>

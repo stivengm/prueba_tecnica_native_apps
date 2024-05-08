@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ParamMap, Router, ActivatedRoute } from '@angular/router';
+import { ParamMap, Router, ActivatedRoute, Params } from '@angular/router';
+import { GetRecipeService } from '../../core/services/get-recipe.service';
+import { Recipe } from '../../core/models';
 
 @Component({
   selector: 'app-results-search',
@@ -10,17 +12,19 @@ import { ParamMap, Router, ActivatedRoute } from '@angular/router';
 })
 export class ResultsSearchComponent {
 
-  constructor( private route: ActivatedRoute ) {
+  recipeResults: Recipe[] = [];
+
+  constructor( private route: ActivatedRoute, private getRecipeService: GetRecipeService ) {
     console.log(this.route.snapshot.queryParamMap);
-
-    // console.log(this.route.snapshot.params);
-
-
     
-
   }
 
-  // private route: ActivatedRoute
 
+  ngOnInit() {
+    this.getRecipeService.dataRecipe.subscribe((data) => {
+      this.recipeResults = data;
+      console.log(this.recipeResults);
+    });
+  }
 
 }

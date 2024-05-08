@@ -1,5 +1,14 @@
-<div>
+<div class="navbar">
 
-    <p> {{ titleApp }}</p>
+    <p class="title_app"> {{ titleApp }}</p>
+
+    <div class="content_search">
+        <form class="form_search" action="">
+            <input class="input_form_search" placeholder="E-mail" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+            <label class="label_button_search" for="checkbox">
+                <button class="c-form_button" type="button">Send</button>
+            </label>
+        </form>
+    </div>
 
 </div>

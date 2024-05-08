@@ -7,6 +7,9 @@
         font-family: var(--mt-font-family-cursive);
         font-size: 42px;
         margin: 0;
+        text-decoration: none;
+        color: var(--mt-black-color);
+        cursor: pointer;
     }
     .content_search {
         width: 300px;

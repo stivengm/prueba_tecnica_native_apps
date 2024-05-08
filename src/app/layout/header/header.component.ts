@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ParamMap, Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { GetRecipeService } from '../../core/services/get-recipe.service';
 
 @Component({
   selector: 'app-header',
@@ -12,13 +13,21 @@ export class HeaderComponent {
 
   titleApp = "Recetas";
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute, private getRecipeService: GetRecipeService ) {}
 
-  handleSearch() {
+  handleSearch(event: Event) {
+    var query = (event.target as HTMLInputElement).value;
+
+    this.getRecipeService.getSearchByWords(query)
+    .subscribe((value) => {
+      this.getRecipeService.dataRecipe.emit(value.meals);
+    });
+
     this.router.navigate(['/search'], { relativeTo: this.route, queryParams: {
       type: 'words',
-      search: 'apple'
+      search: query
     }});
+
   }
 
 }

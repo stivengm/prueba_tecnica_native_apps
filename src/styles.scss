@@ -1,9 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-    --mt-background-color-app: #fdfbff;
+    
+    // --mt-background-color-app: #fdfbff;
+    --mt-background-color-app: #f3f3f3;
+    --mt-primary-color: #ef891b;
+    --mt-white-color: #FFFFFF;
 
     --mt-text-title: #404040;
     --mt-text-subtitle: #949494;
+    --mt-font-family: "Montserrat", sans-serif;
+    --mt-font-family-cursive: "Great Vibes", cursive;
+
+
     background: var(--mt-background-color-app);
+    font-family: var(--mt-font-family);
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }

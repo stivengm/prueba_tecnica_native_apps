@@ -4,6 +4,7 @@
         @for (category of categories; track $index) {
 
             <span class="item_category" (click)="searchByCategory(category.strCategory)"> {{ category.strCategory }}</span>
+
             
         }
     </div>
@@ -13,7 +14,7 @@
         @for (recipe of recipeSearch; track $index) {
             <div class="item_recipe">
                 <img [src]="recipe.strMealThumb" class="img_recipe" alt="">
-                <p>{{ recipe.strMeal }}</p>
+                <span class="title_recipe">{{ recipe.strMeal }}</span>
             </div>
         }
 

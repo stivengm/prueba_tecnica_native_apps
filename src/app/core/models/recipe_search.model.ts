@@ -7,3 +7,8 @@ export interface Recipe {
     strMealThumb: String,
     idMeal: String
 }
+
+export interface QueryParams {
+    type: string,
+    search: string
+}

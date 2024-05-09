@@ -20,8 +20,6 @@ export class DetailsRecipeComponent {
     var params = this.route.snapshot.params as QueryParams;
 
     this.getRecipeService.getRecipeById(params.id).subscribe((data) => {
-      console.log(data);
-
       var tagsFormat: Array<String> = [];
 
       if (data.meals[0].strTags != "" && data.meals[0].strTags != null) {

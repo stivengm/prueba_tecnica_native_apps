@@ -11,6 +11,7 @@
         .tags {
             display: flex;
             gap: 10px;
+            overflow-x: auto;
             .tag {
                 border-radius: 46%;
                 border: 1px solid #c3c3c3;
@@ -27,13 +28,16 @@
                 margin: 30px 0;
             }
         }
-        .btn_view_more {
-            border-radius: 30px;
-            border: 0;
-            background-color: var(--mt-primary-color);
-            color: var(--mt-white-color);
-            padding: 16px;
-            cursor: pointer;
+        .btn_actions {
+            
+            .btn_view_more {
+                border-radius: 30px;
+                border: 0;
+                background-color: var(--mt-primary-color);
+                color: var(--mt-white-color);
+                padding: 16px;
+                cursor: pointer;
+            }
         }
     }
 }

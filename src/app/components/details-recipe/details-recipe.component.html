@@ -51,8 +51,11 @@
         }
 
         @if (recipeResults[0].strSource != "") {
-            <button (click)="viewMore(recipeResults[0].strSource)" class="btn_view_more">Ver más</button>
+            <div class="btn_actions">
+                <button (click)="viewMore(recipeResults[0].strSource)" class="btn_view_more">Ver más</button>
+            </div>
         }
+
 
 
     </div>

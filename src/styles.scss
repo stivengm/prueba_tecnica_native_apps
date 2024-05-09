@@ -22,3 +22,80 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .content_result_search {
+        justify-content: center;
+    }
+    .content_home  {
+        .recipe_results {
+            justify-content: center;
+        }
+    }
+    .content_details {
+        flex-direction: column;
+        .image_recipe {
+            width: 100% !important;
+        }
+        .information_recipe {
+            .video_youtube {
+                .video_youtube_iframe {
+                    width: 100%;
+                }
+            }
+            .btn_actions {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 10% !important;
+        .menu_button_mobile {
+            display: block !important;
+        }
+        .content_search {
+            // display: none;
+            margin-top: 25px;
+        }
+    }
+    .content_result_search {
+        justify-content: center;
+    }
+    .content_home  {
+        .recipe_results {
+            justify-content: center;
+        }
+    }
+
+    .content_details {
+        flex-direction: column;
+        .image_recipe {
+            width: 100% !important;
+        }
+        .information_recipe {
+            .video_youtube {
+                .video_youtube_iframe {
+                    width: 100%;
+                }
+            }
+            .btn_actions {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    
+}

@@ -2,13 +2,20 @@
 
     <a class="title_app" routerLink="/"> {{ titleApp }}</a>
 
-    <div class="content_search">
-        <form class="form_search" action="">
-            <input class="input_form_search" placeholder="Chocolate" type="text" (keyup)="handleSearch($event)" >
-            <label class="label_button_search" for="checkbox">
-                <button class="c-form_button" type="button">Send</button>
-            </label>
-        </form>
+    <div class="menu_button_mobile" (click)="showSearchMobile()">
+        <img src="../../../assets/menu.svg" alt="menu_icon" class="menu_icon">
     </div>
+
+    @if (isShowNavbarMobile) {
+        <div class="content_search">
+            <form class="form_search" action="">
+                <input class="input_form_search" placeholder="Chocolate" type="text" (keyup)="handleSearch($event)" >
+                <label class="label_button_search" for="checkbox">
+                    <button class="c-form_button" type="button" (click)="handleSearch($event)">Buscar</button>
+                </label>
+            </form>
+        </div>
+    }
+
 
 </div>

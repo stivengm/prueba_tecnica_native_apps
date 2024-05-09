@@ -12,8 +12,17 @@ import { GetRecipeService } from '../../core/services/get-recipe.service';
 export class HeaderComponent {
 
   titleApp = "Recetas";
+  isShowNavbarMobile = false;
 
   constructor(private router: Router, private route: ActivatedRoute, private getRecipeService: GetRecipeService ) {}
+
+  ngOnInit() {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth > 768) {
+        this.isShowNavbarMobile = true;
+      }
+    }
+  }
 
   handleSearch(event: Event) {
     var query = (event.target as HTMLInputElement).value;
@@ -28,6 +37,11 @@ export class HeaderComponent {
       search: query
     }});
 
+  }
+
+  showSearchMobile() {
+    console.log(this.isShowNavbarMobile);
+    this.isShowNavbarMobile = !this.isShowNavbarMobile;
   }
 
 }

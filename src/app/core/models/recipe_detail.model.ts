@@ -53,7 +53,7 @@ export interface RecipeDetail {
     strMeasure18: String,
     strMeasure19: String,
     strMeasure20: String,
-    strSource: String,
+    strSource: string,
     strImageSource: String,
     strCreativeCommonsConfirmed: String,
     dateModified: String

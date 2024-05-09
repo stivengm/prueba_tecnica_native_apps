@@ -12,7 +12,7 @@
     <div class="recipe_results">
 
         @for (recipe of recipeSearch; track $index) {
-            <div class="item_recipe">
+            <div class="item_recipe" (click)="viewDetails(recipe.idMeal)">
                 <img [src]="recipe.strMealThumb" class="img_recipe" alt="">
                 <span class="title_recipe">{{ recipe.strMeal }}</span>
             </div>

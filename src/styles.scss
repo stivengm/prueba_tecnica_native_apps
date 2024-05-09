@@ -23,12 +23,6 @@ body {
     padding: 0;
 }
 
-
-@media screen and (min-width: 1024px) {
-    
-}
-
-
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .content_result_search {
         justify-content: center;
@@ -79,7 +73,6 @@ body {
             justify-content: center;
         }
     }
-
     .content_details {
         flex-direction: column;
         .image_recipe {
@@ -97,5 +90,4 @@ body {
             }
         }
     }
-    
 }

@@ -40,7 +40,6 @@ export class HeaderComponent {
   }
 
   showSearchMobile() {
-    console.log(this.isShowNavbarMobile);
     this.isShowNavbarMobile = !this.isShowNavbarMobile;
   }
 

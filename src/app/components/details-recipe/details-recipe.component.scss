@@ -1,0 +1,39 @@
+.content_details {
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+    padding: 0 15%;
+    .image_recipe {
+        width: 30%;
+        height: fit-content;
+    }
+    .information_recipe {
+        .tags {
+            display: flex;
+            gap: 10px;
+            .tag {
+                border-radius: 46%;
+                border: 1px solid #c3c3c3;
+                padding: 7px 22px;
+            }
+        }
+        .descriptionRecipe {
+            color: var(--mt-text-subtitle);
+        }
+        .video_youtube {
+            display: flex;
+            flex-direction: column;
+            .video_youtube_iframe {
+                margin: 30px 0;
+            }
+        }
+        .btn_view_more {
+            border-radius: 30px;
+            border: 0;
+            background-color: var(--mt-primary-color);
+            color: var(--mt-white-color);
+            padding: 16px;
+            cursor: pointer;
+        }
+    }
+}

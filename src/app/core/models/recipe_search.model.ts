@@ -9,6 +9,7 @@ export interface Recipe {
 }
 
 export interface QueryParams {
-    type: string,
-    search: string
+    type: String,
+    search: String,
+    id: String
 }

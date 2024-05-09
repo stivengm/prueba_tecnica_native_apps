@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { CategoriesModel, Recipe, RecipeModel } from '../models/index';
+import { CategoriesModel, Recipe, RecipeModel, RecipeDetailInterface } from '../models/index';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -26,7 +26,11 @@ export class GetRecipeService {
     return this.http.get<RecipeModel>(`https://${environment.endPoint}/filter.php?c=${category}`);
   }
 
-  getSearchByWords(value: string) {
+  getSearchByWords(value: String) {
     return this.http.get<RecipeModel>(`https://${environment.endPoint}/search.php?s=${value}`);
+  }
+
+  getRecipeById(idRecipe: String): Observable<RecipeDetailInterface> {
+    return this.http.get<RecipeDetailInterface>(`https://${environment.endPoint}/lookup.php?i=${idRecipe}`);
   }
 }

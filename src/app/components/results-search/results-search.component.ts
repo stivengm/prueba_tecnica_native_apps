@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ParamMap, Router, ActivatedRoute, Params } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { GetRecipeService } from '../../core/services/get-recipe.service';
 import { Recipe, QueryParams } from '../../core/models';
 
@@ -14,7 +14,7 @@ export class ResultsSearchComponent {
 
   recipeResults: Recipe[] = [];
 
-  constructor( private route: ActivatedRoute, private getRecipeService: GetRecipeService ) { }
+  constructor( private route: ActivatedRoute, private getRecipeService: GetRecipeService, private router: Router ) { }
 
   ngOnInit() {
 
@@ -29,6 +29,10 @@ export class ResultsSearchComponent {
     this.getRecipeService.dataRecipe.subscribe((data) => {
       this.recipeResults = data;
     });
+  }
+
+  viewDetails(id: String) {
+    this.router.navigate([`/detail-recipe/${id}`]);
   }
 
 }
